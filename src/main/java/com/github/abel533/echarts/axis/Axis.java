@@ -131,6 +131,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     private Object interval;
 
+    /**
+     * 坐标轴相对于默认位置的偏移，在相同的 position 上有多个坐标轴的时候有用。
+     */
+    private Integer offset;
+
     public Boolean scale() {
         return this.scale;
     }
@@ -722,5 +727,22 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
 
     public void setInterval(Object interval) {
         this.interval = interval;
+    }
+
+    public Integer getOffset() {
+        return offset;
+    }
+
+    public void setOffset(Integer offset) {
+        this.offset = offset;
+    }
+
+    public Integer offset() {
+        return offset;
+    }
+
+    public T offset(Integer offset) {
+        this.offset = offset;
+        return (T) this;
     }
 }

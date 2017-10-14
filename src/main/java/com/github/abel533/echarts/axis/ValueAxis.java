@@ -26,7 +26,7 @@ package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
-import com.github.abel533.echarts.style.LineStyle;
+import com.github.abel533.echarts.style.NameTextStyle;
 
 /**
  * 值轴
@@ -43,7 +43,7 @@ public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
      */
-    private LineStyle nameTextStyle;
+    private NameTextStyle nameTextStyle;
     /**
      * 小数精度，默认为0，无小数点
      */
@@ -183,7 +183,7 @@ public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 获取nameTextStyle值
      */
-    public LineStyle getNameTextStyle() {
+    public NameTextStyle getNameTextStyle() {
         return nameTextStyle;
     }
 
@@ -192,7 +192,7 @@ public class ValueAxis extends Axis<ValueAxis> {
      *
      * @param nameTextStyle
      */
-    public void setNameTextStyle(LineStyle nameTextStyle) {
+    public void setNameTextStyle(NameTextStyle nameTextStyle) {
         this.nameTextStyle = nameTextStyle;
     }
 
@@ -216,9 +216,9 @@ public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
      */
-    public LineStyle nameTextStyle() {
+    public NameTextStyle nameTextStyle() {
         if (this.nameTextStyle == null) {
-            this.nameTextStyle = new LineStyle();
+            this.nameTextStyle = new NameTextStyle();
         }
         return this.nameTextStyle;
     }
@@ -228,7 +228,7 @@ public class ValueAxis extends Axis<ValueAxis> {
      *
      * @param style
      */
-    public ValueAxis nameTextStyle(LineStyle style) {
+    public ValueAxis nameTextStyle(NameTextStyle style) {
         this.nameTextStyle = style;
         return this;
     }
